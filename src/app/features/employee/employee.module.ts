@@ -4,18 +4,22 @@ import { CommonModule } from '@angular/common';
 import { EmployeeRoutingModule } from './employee-routing.module';
 import { EmployeeComponent } from './employee.component';
 import {EmployeeListPage} from "./employee-list/employee-list.page";
-import { EmployeeCreatePage } from './employee-create/employee-create.page';
+import { EmployeeAddPage } from './employee-add/employee-add.page';
+import {ButtonComponent} from "../../shared/components/button/button.component";
+import {PaginationControlComponent} from "../../shared/components/pagination-control/pagination-control.component";
 
 
 @NgModule({
   declarations: [
     EmployeeComponent,
     EmployeeListPage,
-    EmployeeCreatePage
+    EmployeeAddPage
   ],
   imports: [
     CommonModule,
-    EmployeeRoutingModule
+    EmployeeRoutingModule,
+    ButtonComponent,
+    PaginationControlComponent
   ]
 })
 export class EmployeeModule { }

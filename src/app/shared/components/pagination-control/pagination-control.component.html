@@ -1,0 +1,36 @@
+<div class="flex gap-2 justify-end items-center">
+  <span>showing {{count}} out of {{totalCount}} data</span>
+  <div class="shadow-md">
+    <app-button
+      (click)="changePage(page-1)"
+      variant="info"
+      [outline]="true"
+      extraClass="border-2 rounded-l-md rounded-r-none disabled:bg-accent disabled:text-gray-500"
+      [disabled]="disabled || page <= 0"
+    >
+      PREV
+    </app-button
+    >
+    <app-button
+      *ngFor="let _ of pages; index as i;"
+      (click)="changePage(i)"
+      variant="info"
+      [outline]="i !== page"
+      extraClass="border-2 border-l-0 rounded-none disabled:text-gray-500"
+      [disabled]="disabled"
+    >
+      {{i + 1}}
+    </app-button
+    >
+    <app-button
+      (click)="changePage(page+1)"
+      variant="info"
+      [outline]="true"
+      extraClass="border-2 border-l-0 rounded-r-md rounded-l-none disabled:bg-accent disabled:text-gray-500"
+      [disabled]="disabled || page >= totalPages - 1"
+    >
+      NEXT
+    </app-button
+    >
+  </div>
+</div>

@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {EmployeeComponent} from './employee.component';
 import {EmployeeListPage} from "./employee-list/employee-list.page";
-import {EmployeeCreatePage} from "./employee-create/employee-create.page";
+import {EmployeeAddPage} from "./employee-add/employee-add.page";
 
 const routes: Routes = [
   {
@@ -20,9 +20,9 @@ const routes: Routes = [
         component: EmployeeListPage,
       },
       {
-        path: 'create',
-        title: 'Employee | Create',
-        component: EmployeeCreatePage,
+        path: 'add',
+        title: 'Employee | Add',
+        component: EmployeeAddPage,
       }
     ]
   },
